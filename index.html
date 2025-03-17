@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecordRTC Video Recorder</title>
+</head>
+<body>
+    <h1>FakeFlip Video Recorder</h1>
+    
+    <video id="video" autoplay playsinline></video>
+    <br>
+    <button id="start">Start Recording</button>
+    <button id="stop" disabled>Stop Recording</button>
+    <br>
+    <a id="download" style="display:none">Download Recording</a>
+
+    <!-- Load RecordRTC from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/recordrtc@latest/RecordRTC.js"></script>
+
+    <script>
+        let recorder;
+        let stream;
+        const video = document.getElementById("video");
+        const startButton = document.getElementById("start");
+        const stopButton = document.getElementById("stop");
+        const downloadLink = document.getElementById("download");
+
+        startButton.addEventListener("click", async () => {
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+                video.srcObject = stream;
+                video.play(); // Ensure the video plays
+
+                recorder = new RecordRTC(stream, { type: "video" });
+                recorder.startRecording();
+
+                startButton.disabled = true;
+                stopButton.disabled = false;
+            } catch (error) {
+                console.error("Error accessing camera/microphone: ", error);
+                alert("Could not access camera or microphone. Please check your browser settings.");
+            }
+        });
+
+        stopButton.addEventListener("click", () => {
+            recorder.stopRecording(() => {
+                const blob = recorder.getBlob();
+                const url = URL.createObjectURL(blob);
+
+                // Provide download option
+                downloadLink.href = url;
+                downloadLink.download = "recorded-video.webm";
+                downloadLink.style.display = "block";
+                downloadLink.innerText = "Download Recording";
+
+                // Stop the video stream
+                if (stream) {
+                    stream.getTracks().forEach(track => track.stop());
+                }
+
+                startButton.disabled = false;
+                stopButton.disabled = true;
+            });
+        });
+    </script>
+</body>
+</html>
