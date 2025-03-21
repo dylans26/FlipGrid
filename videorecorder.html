@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="videorecorder.css">
+    <title>FakeFlip Video Recorder</title>
+</head>
+<body>
+    <div class="container">
+        <h1>FakeFlip Video Recorder</h1>
+        
+        <video id="video" autoplay playsinline></video>
+        <br>
+        <button id="start">Start Recording</button>
+        <button id="stop" disabled>Stop Recording</button>
+        <br>
+        <a id="download">Download Recording</a>
+        
+        <div id="countdown-overlay" class="hidden">
+            <div id="countdown">3</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/recordrtc@latest/RecordRTC.js"></script>
+
+    <script>
+        let recorder;
+        let stream;
+        const video = document.getElementById("video");
+        const startButton = document.getElementById("start");
+        const stopButton = document.getElementById("stop");
+        const downloadLink = document.getElementById("download");
+        const countdownOverlay = document.getElementById("countdown-overlay");
+        const countdownDisplay = document.getElementById("countdown");
+
+        async function startCamera() {
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+                video.srcObject = stream;
+                video.play();
+            } catch (error) {
+                console.error("Error accessing camera/microphone: ", error);
+                alert("Could not access camera or microphone. Please check your browser settings.");
+            }
+        }
+
+        startCamera();
+
+        function startCountdown() {
+            let count = 3;
+            countdownOverlay.classList.remove("hidden");
+            countdownDisplay.textContent = count;
+
+            const countdownInterval = setInterval(() => {
+                count--;
+                if (count > 0) {
+                    countdownDisplay.textContent = count;
+                } else {
+                    clearInterval(countdownInterval);
+                    countdownOverlay.classList.add("hidden");
+                    startRecording();
+                }
+            }, 1000);
+        }
+
+        function startRecording() {
+            try {
+                recorder = new RecordRTC(stream, { type: "video" });
+                recorder.startRecording();
+
+                startButton.disabled = true;
+                stopButton.disabled = false;
+            } catch (error) {
+                console.error("Error starting the recording: ", error);
+                alert("There was an issue starting the recording.");
+            }
+        }
+
+        startButton.addEventListener("click", startCountdown);
+
+        stopButton.addEventListener("click", () => {
+            recorder.stopRecording(() => {
+                const blob = recorder.getBlob();
+                const url = URL.createObjectURL(blob);
+
+                downloadLink.href = url;
+                downloadLink.download = "recorded-video.webm";
+                downloadLink.style.display = "inline-block";
+                downloadLink.innerText = "Download Recording";
+
+                if (stream) {
+                    stream.getTracks().forEach(track => track.stop());
+                }
+
+                startButton.disabled = false;
+                stopButton.disabled = true;
+            });
+
+            stopButton.disabled = true;
+        });
+    </script>
+</body>
+</html>
+
+
+
+
