@@ -1857,3 +1857,19 @@ button:disabled {
 #download:hover {
     background-color: #218838;
 }
+
+#countdown-overlay {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 10%; /* Moves it to the top */
+  left: 80%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  color: rgb(104, 204, 104);
+  font-size: 120px; /* Larger text */
+  font-weight: bold;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
