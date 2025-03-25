@@ -1791,3 +1791,85 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
+/*.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}*/
+
+#video {
+    width: 110%;
+    max-width: 640px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border: 10px solid #ddd;
+    border-bottom: 40px solid #ddd;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    display: inline-block;
+    align-self: left;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0880e8;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#download {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #28a745;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#download:hover {
+    background-color: #218838;
+}
+
+#countdown-overlay {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 10%; /* Moves it to the top */
+  left: 80%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  color: rgb(104, 204, 104);
+  font-size: 120px; /* Larger text */
+  font-weight: bold;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
