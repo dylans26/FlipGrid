@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio Details - Anyar Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  
+
+  <!-- =======================================================
+  * Template Name: Anyar
+  * Template URL: https://bootstrapmade.com/anyar-free-multipurpose-one-page-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">FAKEFLIP</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#portfolio">Profile</a></li>
+          <li><a href="#team">My Videos</a></li>
+          <li class="dropdown"><a href="#"><span>Classes</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Class 1</a></li>
+                  <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                      <li><a href="#">Deep Class 1</a></li>
+                      <li><a href="#">Deep Class 2</a></li>
+                      <li><a href="#">Deep Class 3</a></li>
+                      <li><a href="#">Deep Class 4</a></li>
+                      <li><a href="#">Deep Class 5</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Class 2</a></li>
+                  <li><a href="#">Class 3</a></li>
+                  <li><a href="#">CLass 4</a></li>
+                </ul>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade">
+      <div class="container position-relative">
+        <h1>Video Details</h1>
+        <p>Project name or some sort of other description</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Video Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="row gy-4 d-flex align-items-start">
+        <!-- Video Recording Section -->
+        <div class="col-lg-6">
+            <div class="container">
+                <video id="video" autoplay playsinline style="width: 100%;"></video>
+                <br>
+                <button id="start">Start Recording</button>
+                <button id="stop" disabled>Stop Recording</button>
+                <a id="download">Download Recording</a>
+    
+                <div id="countdown-overlay" class="hidden">
+                    <div id="countdown">3</div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Profile Information Section -->
+        <div class="col-lg-6">
+          <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project information</h3>
+              <ul>
+                  <li><strong>Subject</strong>: <span contenteditable="true">Language</span></li>
+                  <li><strong>Project Assigned</strong>: <span contenteditable="true">01 March, 2025</span></li>
+                  <li><strong>Project Due</strong>: <span contenteditable="true">05 March, 2025</span></li>
+                  <li><strong>Teacher</strong>: <a href="#">teacher_email@asl.org</a></li>
+              </ul>
+          </div>
+          <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Assignment Description</h2>
+              <p contenteditable="true">
+                  Description of task and project with teacher guidelines and requirements.
+              </p>
+          </div>
+      </div>
+      <!-- End Portfolio Details Section -->    
+
+      <!--<div class="container" data-aos="fade-up" data-aos-delay="100">
+        
+
+        <div class="row gy-4">
+
+            <div class="col-6"></div>
+                  <iframe src="videorecorder.html" width="100%" height="500px" frameborder="0"></iframe>
+                  <div class="container">
+                    <video id="video" autoplay playsinline></video>
+                    <br>
+                    <button id="start">Start Recording</button>
+                    <button id="stop" disabled>Stop Recording</button>
+                    <br>
+                    <a id="download">Download Recording</a>
+                    
+                    <div id="countdown-overlay" class="hidden">
+                        <div id="countdown">3</div>
+                    </div>
+                </div>-->
+            
+                <script src="https://cdn.jsdelivr.net/npm/recordrtc@latest/RecordRTC.js"></script>
+            
+                <script>
+                    let recorder;
+                    let stream;
+                    const video = document.getElementById("video");
+                    const startButton = document.getElementById("start");
+                    const stopButton = document.getElementById("stop");
+                    const downloadLink = document.getElementById("download");
+                    const countdownOverlay = document.getElementById("countdown-overlay");
+                    const countdownDisplay = document.getElementById("countdown");
+            
+                    async function startCamera() {
+                      countdownOverlay.style.display = "none"; // Hide countdown container
+                        try {
+                            stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+                            video.srcObject = stream;
+                            video.play();
+                        } catch (error) {
+                            console.error("Error accessing camera/microphone: ", error);
+                            alert("Could not access camera or microphone. Please check your browser settings.");
+                        }
+                    }
+            
+                    startCamera();
+
+                    function startCountdown() {
+                      let count = 3;
+                      countdownOverlay.classList.remove("hidden"); // Make countdown visible
+                      countdownOverlay.style.opacity = "1"; // Ensure full visibility
+                      countdownOverlay.style.display = "flex"; // Show countdown container
+
+                      countdownDisplay.textContent = count;
+
+                      const countdownInterval = setInterval(() => {
+                          count--;
+                          if (count > 0) {
+                              countdownDisplay.textContent = count;
+                          } else {
+                              clearInterval(countdownInterval);
+                              countdownDisplay.textContent = "GO!"; // Flash "GO!" before recording
+
+                              setTimeout(() => {
+                                  countdownOverlay.style.opacity = "0"; // Fade-out effect
+                                  setTimeout(() => {
+                                      countdownOverlay.style.display = "none"; // Fully remove from screen
+                                      startRecording();
+                                  }, 500); // Give time for fade-out animation to complete
+                              }, 500); // Show "GO!" for a short moment
+                          }
+                      }, 1000);
+                  }
+
+
+            
+                    function startRecording() {
+                        try {
+                            recorder = new RecordRTC(stream, { type: "video" });
+                            recorder.startRecording();
+            
+                            startButton.disabled = true;
+                            stopButton.disabled = false;
+                        } catch (error) {
+                            console.error("Error starting the recording: ", error);
+                            alert("There was an issue starting the recording.");
+                        }
+                    }
+            
+                    startButton.addEventListener("click", startCountdown);
+            
+                    stopButton.addEventListener("click", () => {
+                        recorder.stopRecording(() => {
+                            const blob = recorder.getBlob();
+                            const url = URL.createObjectURL(blob);
+            
+                            downloadLink.href = url;
+                            downloadLink.download = "recorded-video.webm";
+                            downloadLink.style.display = "inline-block";
+                            downloadLink.innerText = "Download Recording";
+            
+                            if (stream) {
+                                stream.getTracks().forEach(track => track.stop());
+                            }
+            
+                            startButton.disabled = false;
+                            stopButton.disabled = true;
+                        });
+            
+                        stopButton.disabled = true;
+                    });
+                </script>
+          </div>
+
+          <!--<div class="col-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Subject</strong>: Language</li>
+                <li><strong>Project Assigned</strong>: 01 March, 2025</li>
+                <li><strong>Project Due</strong>: 05 March, 2025</li>
+                <li><strong>Teacher</strong>: <a href="#">teacher_email@asl.org</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Assignment Description</h2>
+              <p>
+                Description of task and project with teacher guidelines and requirments.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section> End Portfolio Details Section -->
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
