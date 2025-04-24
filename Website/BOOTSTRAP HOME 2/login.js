@@ -77,11 +77,22 @@ document.getElementById('goToRegister').addEventListener('click', () => showPage
 document.querySelectorAll('.goHome').forEach(btn => {
   btn.addEventListener('click', () => showPage('homePage'));
 });
-document.getElementById('logoutBtn').addEventListener('click', async () => {
-  await signOut(auth);
-  showPage('homePage');
-});
+// document.getElementById('logoutBtn').addEventListener('click', async () => {
+//   await signOut(auth);
+//   showPage('homePage');
+// });
+// const signOutButton = document.getElementById('signOutButton');
 
+//     signOutButton.addEventListener('click', () => {
+//       firebase.auth().signOut().then(() => {
+//         // Sign-out successful.
+//         alert('Signed out successfully!');
+//       }).catch((error) => {
+//         // An error happened.
+//         console.error('Sign Out Error', error);
+//         alert('Sign out failed.');
+//       });
+//     });
 // File Upload
 document.getElementById('fileInput').addEventListener('change', async (e) => {
   const file = e.target.files[0];
