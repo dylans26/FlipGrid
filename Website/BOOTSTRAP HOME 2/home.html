@@ -2,40 +2,23 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Anyar Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS Files 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> --> 
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <script type="module" src="home.js"></script>
-
-  <!-- =======================================================
-  * Template Name: FAKEFLIP
-  * Template URL: https://bootstrapmade.com/anyar-free-multipurpose-one-page-bootstrap-theme/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link href="main.css" rel="stylesheet"> 
+  
+  <!-- Main JS File -->
+  <script src="main.js" type="module"></script>
 </head>
 
 <body class="index-page">
@@ -44,33 +27,12 @@
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
       <a href="home.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">FAKEFLIP</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="#portfolio">Profile</a></li>
           <button id="signOutButton">Sign Out</button>
-          <li class="dropdown"><a href="#"><span>Classes</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Class 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Class 1</a></li>
-                  <li><a href="#">Deep Class 2</a></li>
-                  <li><a href="#">Deep Class 3</a></li>
-                  <li><a href="#">Deep Class 4</a></li>
-                  <li><a href="#">Deep Class 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Class 2</a></li>
-              <li><a href="#">Class 3</a></li>
-              <li><a href="#">CLass 4</a></li>
-            </ul>
-        </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
@@ -89,161 +51,82 @@
           </div>
         </div>
       </div>
-
-    </section><!-- /Hero Section -->
-
+    </section>
 
 
-     <!-- CLASS Section -->
-     <section id="portfolio" class="portfolio section">
+    <!-- PORTFOLIO NEW SECTION-->
+    <section id="portfolio">
+      
+
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Classes</h2>
-        <p>Classes you are a part of</p>
+        <h2>
+        <h2>ASSIGNMENTS</h2>
       </div><!-- End Section Title -->
-
       <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">Language</li>
-            <li data-filter=".filter-product">CS</li>
-            <li data-filter=".filter-branding">Social Studies</li>
-            <li data-filter=".filter-books">Other</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <a href="assets/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details"> Language Class 1</a></h4>
-                  <p>Teacher Name</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <a href="assets/img/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">CS Class 1</a></h4>
-                  <p>Teacher Name</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <a href="assets/img/portfolio/branding-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Social Studies Class 1</a></h4>
-                  <p>Teacher Name</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <a href="assets/img/portfolio/books-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Other Class 1</a></h4>
-                  <p>Teacher Name</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <a href="assets/img/portfolio/app-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Language Class 2</a></h4>
-                  <p>Teacher Name</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <a href="assets/img/portfolio/product-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">CS Class 2</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <a href="assets/img/portfolio/branding-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Social Studies Class 2</a></h4>
-                  <p>Teacher Name</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <a href="assets/img/portfolio/books-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Other Class 2</a></h4>
-                  <p>Teacher Name</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <a href="assets/img/portfolio/app-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Language Class 3</a></h4>
-                  <p>Teacher Name</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <a href="assets/img/portfolio/product-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">CS Class 3</a></h4>
-                  <p>Teacher Name</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <a href="assets/img/portfolio/branding-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Social Studies Class 3</a></h4>
-                  <p>Teacher Name</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <a href="assets/img/portfolio/books-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Other Class 3</a></h4>
-                  <p>Teacher Name</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
+    
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="language">Language</button>
+          <button class="filter-btn" data-filter="cs">CS</button>
+          <button class="filter-btn" data-filter="social">Social Studies</button>
+          <button class="filter-btn" data-filter="other">Other</button>
         </div>
-
+    
+        <!-- Portfolio Grid -->
+        <div class=" portfolio-grid" id="portfolio-grid">
+          <div class="col-lg-4 col-md-6 portfolio-item language">
+            <!-- <img src="https://via.placeholder.com/300x200?text=Language+1" alt=""> -->
+            <h4 id ="goToClass"> Language Class 1 </h4>
+            <p>Teacher A</p>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 portfolio-item cs">
+            <!-- <img src="https://via.placeholder.com/300x200?text=CS+1" alt=""> -->
+            <h4>CS Class 1</h4>
+            <p>Teacher B</p>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 portfolio-item social">
+            <!-- <img src="https://via.placeholder.com/300x200?text=Social+1" alt=""> -->
+            <h4>Social Studies Class 1</h4>
+            <p>Teacher C</p>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 portfolio-item other">
+            <!-- <img src="https://via.placeholder.com/300x200?text=Other+1" alt=""> -->
+            <h4>Other Class 1</h4>
+            <p>Teacher D</p>
+          </div>
+    
+          <!-- More items can be added -->
+    
+        </div>
+        <!-- Add Class Form -->
+        <div class="add-class-form">
+          <h3>Add New Class</h3>
+          <form id="new-class-form">
+            <input type="text" id="class-title" placeholder="Class Title" required>
+            <input type="text" id="class-teacher" placeholder="Teacher Name" required>
+            <select id="class-category" required>
+              <option value="">Select Category</option>
+              <option value="language">Language</option>
+              <option value="cs">CS</option>
+              <option value="social">Social Studies</option>
+              <option value="other">Other</option>
+            </select>
+            <button type="submit">Add Class</button>
+          </form>
+        </div>
+    
       </div>
+    </section>    
+    <!-- End Portfolio Section -->
+    <!-- End Hero Section -->
 
-    </section><!-- /Portfolio Section -->
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -251,17 +134,18 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
+  <!-- Vendor JS Files 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script> -->
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="main.js" type="module"></script>
+  <script src="home.js" type="module"></script>
 
 </body>
 

@@ -72,8 +72,8 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* /* PHP Email Form Messages
-------------------------------
+/* PHP Email Form Messages
+------------------------------*/
 .php-email-form .error-message {
   display: none;
   background: #df1529;
@@ -909,238 +909,94 @@ section,
   background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
-.about .content h3 {
-  font-weight: 700;
-  font-size: 34px;
-  margin-bottom: 30px;
-}
 
-.about .content p {
-  margin-bottom: 30px;
-}
-
-.about .content .about-btn {
-  padding: 8px 30px 9px 30px;
-  color: var(--accent-color);
-  border-radius: 50px;
-  transition: 0.3s;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 13px;
-  display: inline-flex;
-  align-items: center;
-  border: 2px solid var(--accent-color);
-}
-
-.about .content .about-btn i {
-  font-size: 16px;
-  padding-left: 5px;
-}
-
-.about .content .about-btn:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.about .icon-box i {
-  font-size: 40px;
-  color: var(--accent-color);
-  margin-bottom: 10px;
-}
-
-.about .icon-box h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 0 10px 0;
-}
-
-.about .icon-box h4 a {
-  color: var(--heading-color);
-  transition: 0.3s;
-}
-
-.about .icon-box p {
-  font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin-bottom: 0;
-}
-
-.about .icon-box:hover h4 a {
-  color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Clients Section
---------------------------------------------------------------*/
-.clients .swiper {
-  padding: 10px 0;
-}
-
-.clients .swiper-wrapper {
-  height: auto;
-}
-
-.clients .swiper-slide img {
-  transition: 0.3s;
-}
-
-.clients .swiper-slide img:hover {
-  transform: scale(1.1);
-}
-
-/*--------------------------------------------------------------
-# Services Section
---------------------------------------------------------------*/
-.services .service-item {
-  position: relative;
-  height: 100%;
-  margin-bottom: 30px;
-}
-
-.services .service-item .icon {
-  margin-right: 20px;
-}
-
-.services .service-item .icon i {
-  color: var(--accent-color);
-  font-size: 40px;
-  line-height: 0;
-  transition: 0.3s;
-}
-
-.services .service-item:hover .icon i {
-  color: var(--accent-color);
-}
-
-.services .service-item .title {
-  color: var(--heading-color);
-  font-weight: 700;
-  margin-bottom: 10px;
-  font-size: 20px;
-  transition: 0.3s;
-}
-
-.services .service-item .description {
-  font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  margin-bottom: 10px;
-}
-
-.services .service-item .readmore {
-  display: flex;
-  align-items: center;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  transition: 0.3s;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.services .service-item .readmore i {
-  margin-left: 8px;
-}
-
-.services .service-item:hover .title,
-.services .service-item:hover .readmore,
-.services .service-item:hover .icon i {
-  color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Call To Action Section
---------------------------------------------------------------*/
-.call-to-action {
-  --background-color: none;
-}
-
-.call-to-action .container {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  border-radius: 15px;
-  overflow: hidden;
-  position: relative;
-  clip-path: inset(0 round 15px);
-}
-
-.call-to-action .container img {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.call-to-action .container:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-
-.call-to-action .container .content {
-  position: relative;
-  z-index: 3;
-}
-
-.call-to-action h3 {
-  color: var(--default-color);
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.call-to-action p {
-  color: var(--default-color);
-  margin-bottom: 20px;
-}
-
-.call-to-action .pulsating-play-btn {
-  display: inline-block;
-}
-
-.call-to-action .cta-btn {
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 5px;
-  transition: 0.5s;
-  margin: 10px;
-  border: 2px solid var(--contrast-color);
-  color: var(--contrast-color);
-}
-
-.call-to-action .cta-btn:hover {
-  background: var(--accent-color);
-  border: 2px solid var(--accent-color);
-}
-
-@keyframes pulsate-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
-  }
-}
 
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
-.portfolio .portfolio-filters {
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 4px;
+}
+
+.filter-buttons .active {
+  background: #0056b3;
+}
+
+.add-class-form {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.add-class-form input,
+.add-class-form select,
+.add-class-form button {
+  margin: 5px;
+  padding: 10px;
+  width: 200px;
+}
+
+.add-class-form button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-class-form button:hover {
+  background-color: #218838;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.portfolio-item {
+  width: calc(25% - 20px);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+/*.portfolio .portfolio-filters {
   padding: 0 0 20px 0;
   margin: 0 auto;
   list-style: none;

@@ -1,10 +1,126 @@
-/**
-* Template Name: Anyar
-* Template URL: https://bootstrapmade.com/anyar-free-multipurpose-one-page-bootstrap-theme/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+import {
+  getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword,
+  signOut, onAuthStateChanged, GoogleAuthProvider, signInWithPopup
+} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+import {
+  getStorage, ref, uploadBytes, listAll, getDownloadURL
+} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-storage.js";
+// import { signOut } from "firebase/auth";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDb4Zv5J2V-uPQuDqzAyWstnM6PDfKX3cI",
+  authDomain: "test-fire-449ff.firebaseapp.com",
+  projectId: "test-fire-449ff",
+  storageBucket: "test-fire-449ff.appspot.com",
+  messagingSenderId: "574355526661",
+  appId: "1:574355526661:web:928eaa40a2cf4466aff86c"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const storage = getStorage(app);
+
+// Wait for the DOM to load
+document.addEventListener("DOMContentLoaded", () => {
+  // Get the sign-out button
+  const signOutButton = document.getElementById("signOutButton");
+
+  // Add a click event listener
+  signOutButton.addEventListener("click", () => {
+    // Example sign-out logic
+    if (signOutButton) {
+        signOutButton.addEventListener('click', () => {
+          signOut(auth)
+            .then(() => {
+              alert('Signed out successfully!');
+              window.location.href = "login.html"; // Optional redirect
+            })
+            .catch((error) => {
+              console.error('Sign Out Error', error);
+              alert('Sign out failed.');
+            });
+        });
+      }
+    // Sign out the user
+    signOut(auth)
+
+signOutButton.addEventListener("click", () => {
+  signOut(auth)
+    .then(() => {
+      console.log("User signed out");
+      window.location.href = "login.html";
+    })
+    .catch((error) => {
+      console.error("Error signing out:", error);
+    });
+});
+
+    // Clear user session (example: localStorage/sessionStorage)
+    localStorage.clear();
+    sessionStorage.clear();
+
+    // Redirect to login page
+    window.location.href = "login.html";
+  });
+});
+
+
+
+//ATTEMPT FROM CHAT FOR PORTFOLIO SECTION
+// Filtering
+const filterButtons = document.querySelectorAll('.filter-btn');
+const portfolioGrid = document.getElementById('portfolio-grid');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Remove active class from all
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    // Add active to clicked
+    button.classList.add('active');
+
+    const filterValue = button.getAttribute('data-filter');
+
+    const items = document.querySelectorAll('.portfolio-item');
+    items.forEach(item => {
+      if (filterValue === 'all' || item.classList.contains(filterValue)) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+  });
+});
+
+// Adding New Classes
+const form = document.getElementById('new-class-form');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const title = document.getElementById('class-title').value.trim();
+  const teacher = document.getElementById('class-teacher').value.trim();
+  const category = document.getElementById('class-category').value;
+
+  if (!title || !teacher || !category) {
+    alert('Please complete all fields.');
+    return;
+  }
+
+  const newItem = document.createElement('div');
+  newItem.classList.add('portfolio-item', category);
+
+  newItem.innerHTML = `
+    <img src="https://via.placeholder.com/300x200?text=${encodeURIComponent(title)}" alt="${title}">
+    <h4>${title}</h4>
+    <p>${teacher}</p>
+  `;
+
+  portfolioGrid.appendChild(newItem);
+
+  form.reset();
+});
 
 (function() {
   "use strict";
@@ -159,15 +275,6 @@
       }, false);
     });
 
-  });
-
-  /**
-   * Frequently Asked Questions Toggle
-   */
-  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
-    faqItem.addEventListener('click', () => {
-      faqItem.parentNode.classList.toggle('faq-active');
-    });
   });
 
 })();
